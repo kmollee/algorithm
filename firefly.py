@@ -68,7 +68,7 @@ class Firefly(object):
         self.alpha = alpha
         # alpha0, use to calculate_new_alpha
         self.alpha0 = alpha
-        # betamin, the minimal attration, must not less than this
+        # betamin, the minimum attration, must not less than this
         self.betaMin = betaMin
         # beta0, the attration of two firefly in 0 distance
         self.beta0 = beta0
@@ -194,7 +194,7 @@ class Firefly(object):
     def findFirefly(self):
         """
         return Chromosome object
-        find the best one firefly(minimal fitness value) in fireflys
+        find the best one firefly(minimum fitness value) in fireflys
         """
         return min(self.fireflys, key=lambda chrom:chrom.f)
 
